@@ -27,3 +27,26 @@ def score_password(password: str) -> dict:
         "score_0_5": score
     }
 
+def strength_feedback(password: str) -> list:
+
+    feedback = []
+    if len(password) < 8:
+        feedback.append("Password is too short (Use at minumum 8 characters)")
+    if not any(c.islower() for c in password):
+        feedback.append("Add lowercase letters")
+    if not any(c.isupper() for c in password):
+        feedback.append("Add uppercase letters")
+    if not any(c.isdigit() for c in password):
+        feedback.append("Add numbers")
+    if not any(c in string.punctuation for c in password):
+        feedback.append("Add symbols (e.g. ! @ #).")
+
+    if not feedback:
+        feedback.append("Password meets basic requirements")
+
+    return feedback   
+
+
+    
+
+
