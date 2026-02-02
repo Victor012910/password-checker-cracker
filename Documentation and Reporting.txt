@@ -1,0 +1,32 @@
+Reporting and Documentation
+
+
+January 31st, 2026:
+
+Tobo
+
+Task: Implement SHA-256 password hashing (simple, clean).
+
+Progress: I implemented a hashing function for the passwords. It was quite simple
+and easy to do. I had to install a libray called bcrypt that uses the gensalt function
+to salt the password and the hashpw function to hash the password.
+
+Challenges: I would say the hardest challenge was understanding what the bcrypt library
+provies and understanding how to use the fucntions, in order to achieve the object of the 
+project.
+
+February 1st, 2026:
+
+Tobo
+
+Task: Implement a dictionary attack against bcrypt hashes (educational, limited, safe).
+
+Progress: I implemented a mock dicitonary attack to simulate a real-world scenario. I started
+off by creating the fucntion to hash the user's password. I then made another function to “crack” 
+a bcrypt‑hashed password by performing a dictionary attack. 
+
+Challenges: The challenges I faced for this task were creating the functions and implemneting the
+hashing and cracking logic within the functions. It was a bit difficult to know what needed to be 
+passed within the arguments. I spent a bit of time debugging to understand what is needed in the 
+program. 
+
