@@ -19,18 +19,31 @@ def simulate_dictionary_attack(crack: bytes, dictionary: list[str]) -> str | Non
     return None 
 
 
-password1 = "qwerty"   
-hashed_password = generate_hash(password1)
-print(f"This is just for a test only: {hashed_password.decode()}")
+ 
+
 mock_dictionary = ["qwerty", "password", "admin", "password123", "Ilovecats", "1223456", "abc123", "1234567890"]
 
+hashed_password = input("Please enter your password. ")
+user_input = generate_hash(hashed_password)
 
-found = simulate_dictionary_attack(hashed_password, mock_dictionary)
-
-if found:
-    print(f"Password found: {found}")
+if hashed_password in mock_dictionary:
+    print(f"WARNING! Your password is used frequently!: {hashed_password}, {user_input.decode()}")
 else:
-    print("Password not found.")
+    print("Password is not found in commonly used list.")
+
+
+# password1 = "qwerty"   
+# hashed_password = generate_hash(password1)
+# print(f"This is just for a test only: {hashed_password.decode()}")
+# mock_dictionary = ["qwerty", "password", "admin", "password123", "Ilovecats", "1223456", "abc123", "1234567890"]
+
+
+# found = simulate_dictionary_attack(hashed_password, mock_dictionary)
+
+# if found:
+#     print(f"Password found: {found}")
+# else:
+#     print("Password not found.")
     
 
 
