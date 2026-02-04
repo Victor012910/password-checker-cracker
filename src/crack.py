@@ -21,7 +21,7 @@ def simulate_dictionary_attack(crack: bytes, dictionary: list[str]) -> str | Non
 
  
 
-mock_dictionary = ["qwerty", "password", "admin", "password123", "Ilovecats", "1223456", "abc123", "1234567890"]
+mock_dictionary = ["qwerty", "password", "admin", "password123", "Ilovecats", "123456", "abc123", "1234567890"]
 
 hashed_password = input("Please enter your password. ")
 user_input = generate_hash(hashed_password)
